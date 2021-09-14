@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 
 @app.route('/hostname/<string:ip>')
-def hello_world(ip):
+def get_hostname(ip):
     reverse_name = ip_address(ip).reverse_pointer
     uri = f"https://dns.google/resolve?name={reverse_name}&type=PTR"
     try:
