@@ -1,6 +1,6 @@
 ## API HostName
 
-通过 API 的方式提供给 IP_Crawler 项目调用。
+通过 API 的方式解决中国无法通过 dns.google 获取 HostName 相关问题。
 
 具体返回结果示例：
 
