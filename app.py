@@ -5,10 +5,15 @@
 from ipaddress import ip_address
 
 import requests
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_from_directory, current_app, request
 from requests import exceptions
 
 app = Flask(__name__)
+
+
+@app.route('/favicon.ico')
+def static_from_root():
+    return send_from_directory(current_app.static_folder, request.path[1:])
 
 
 @app.route('/hostname/<string:ip>')
